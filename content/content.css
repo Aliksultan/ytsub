@@ -1,0 +1,17 @@
+#ytsub-overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 920px);
+  pointer-events: none;
+  z-index: 2000;
+  text-align: center;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: none;
+  transition: opacity 0.08s ease;
+}
+
+#ytsub-overlay.ytsub-visible {
+  display: block;
+}
