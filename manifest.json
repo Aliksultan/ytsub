@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube SRT Overlay",
+  "version": "0.1.0",
+  "description": "Load local SRT files and render customizable subtitles on YouTube videos.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_title": "YouTube SRT Overlay",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
